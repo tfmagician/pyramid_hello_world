@@ -6,7 +6,7 @@ Vagrant::Config.run do |config|
     config.vm.forward_port("web", 8080, 8080)
     config.vm.base_mac = "0800274153F3"
     config.vm.provision :chef_solo, :cookbooks_path => "cookbooks", :run_list => "recipe[python]"
-    config.vm.boot_mode = :gui
+    #config.vm.boot_mode = :gui
 
     config.vm.provision :chef_solo do |chef|
         chef.add_recipe("vagrant_main")
